@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bf8kat2jnmk4n"]
 
-[ext_resource type="Texture2D" uid="uid://mugthwktvl7n" path="res://godot-rust.svg" id="1_gtqhc"]
+[ext_resource type="Texture2D" uid="uid://mugthwktvl7n" path="res://godot-rust.svg" id="1_2741q"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" type="Player" parent="."]
 position = Vector2(64, 64)
-texture = ExtResource("1_gtqhc")
+texture = ExtResource("1_2741q")
