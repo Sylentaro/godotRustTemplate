@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "preLaunchTask": "rust: cargo build",
+            "name": "Debug (LLDB with breakpoints)",
+            "args": [ "--path", "${workspaceFolder}"],
+            "cwd": "${workspaceFolder}/rust",
+            "windows": {
+                "program": "D:\\dev\\Godot\\Godot_v4.2.2-stable_win64.exe"
+            }
+            ,
+            "console": "integratedTerminal", // Przekieruj wyjście do zintegrowanego terminala VS Code
+            "stopOnEntry": false,
+        },
+        {
+            "type": "cppdbg",  // Używamy GDB do debugowania
+            "request": "launch",
+            "name": "Debug (GDB with console output)",
+            "program": "D:\\dev\\Godot\\Godot_v4.2.2-stable_win64.exe",  // Ścieżka do pliku wykonywalnego Godota
+            "args": [
+                "--path", "${workspaceFolder}",  // Ścieżka do Twojego projektu Godot
+            ],
+            "cwd": "${workspaceFolder}/rust",
+            "preLaunchTask": "rust: cargo build",
+            "stopAtEntry": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe"  // Ścieżka do GDB, np. "C:\\msys64\\ucrt64\\Sbin\\gdb.exe"
+        }
+    ]
+}
