@@ -21,7 +21,6 @@ impl ISprite2D for Player {
         godot_print!("Hello, world!"); // Prints to the Godot console
         
         Self {
-            speed: 400.0,
             angular_speed: std::f64::consts::PI,
             base,
         }
